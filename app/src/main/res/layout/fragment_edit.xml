@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.EditFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:fontFamily="@font/regular"
+            android:textColorHint="@color/edit_text_hint_color"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/et_sub_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Subtitle..."
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"
+            android:fontFamily="@font/regular"
+            android:maxLines="1"
+            android:textColorHint="@color/edit_text_hint_color"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/iv_low_priority"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/green_dot" />
+
+
+            <ImageView
+                android:id="@+id/iv_medium_priority"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/yellow_dot"
+                android:layout_marginStart="20dp"/>
+
+            <ImageView
+                android:id="@+id/iv_high_priority"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/red_dot"
+                android:layout_marginStart="20dp"/>
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:hint="Notes..."
+            android:gravity="start"
+            android:background="@drawable/edit_text_bg"
+            android:padding="15dp"
+            android:fontFamily="@font/regular"
+            android:textColorHint="@color/edit_text_hint_color"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_done"
+        app:tint="@color/white"
+        app:backgroundTint="@color/red_color"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="20dp"
+        tools:ignore="RtlHardcoded" />
+</FrameLayout>

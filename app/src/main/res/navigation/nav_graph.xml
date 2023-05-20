@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.todoapp.fragments.HomeFragment"
+        android:label="Notes App"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_createNotesFragment"
+            app:destination="@id/createNotesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNotesFragment"
+        android:name="com.example.todoapp.fragments.CreateNotesFragment"
+        android:label="Add new Notes"
+        tools:layout="@layout/fragment_create_notes" >
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.todoapp.fragments.EditFragment"
+        android:label="Edit Notes"
+        tools:layout="@layout/fragment_edit" >
+        <argument
+            android:name="data"
+            app:argType="com.example.todoapp.model.NotesModel" />
+    </fragment>
+</navigation>
